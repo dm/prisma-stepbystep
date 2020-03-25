@@ -1,0 +1,4 @@
+endpoint: http://localhost:4488
+datamodel: datamodel.prisma
+seed:
+    run: npx ./data/seed.ts

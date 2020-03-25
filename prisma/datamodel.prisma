@@ -1,8 +1,8 @@
 type Store {
  id: ID! @id
  location: String!
- coordintes: Sting!
  date: String!
+ coordinates: String!
  storename: String!
  missings:[Item]
 }
