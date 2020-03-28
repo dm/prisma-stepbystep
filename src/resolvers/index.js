@@ -27,8 +27,12 @@ export default {
             const item = await prisma.item({ id });
             return item;
         },
-        getAllStores: async (parent, args, { prisma }) => {
+        getAllStores: async (parent, args, { prisma }, info) => {
             const stores = await prisma.stores();
+            return stores;
+        },
+        getAllItems: async (parent, args, { prisma }) => {
+            const stores = await prisma.items({});
             return stores;
         },
     },
