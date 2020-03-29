@@ -271,8 +271,8 @@ type Query {
 type Store {
   id: ID!
   location: String!
-  date: String!
   coordinates: String!
+  date: String!
   storename: String!
   missings(where: ItemWhereInput, orderBy: ItemOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Item!]
 }
@@ -286,8 +286,8 @@ type StoreConnection {
 input StoreCreateInput {
   id: ID
   location: String!
-  date: String!
   coordinates: String!
+  date: String!
   storename: String!
   missings: ItemCreateManyInput
 }
@@ -302,10 +302,10 @@ enum StoreOrderByInput {
   id_DESC
   location_ASC
   location_DESC
-  date_ASC
-  date_DESC
   coordinates_ASC
   coordinates_DESC
+  date_ASC
+  date_DESC
   storename_ASC
   storename_DESC
 }
@@ -313,8 +313,8 @@ enum StoreOrderByInput {
 type StorePreviousValues {
   id: ID!
   location: String!
-  date: String!
   coordinates: String!
+  date: String!
   storename: String!
 }
 
@@ -338,16 +338,16 @@ input StoreSubscriptionWhereInput {
 
 input StoreUpdateInput {
   location: String
-  date: String
   coordinates: String
+  date: String
   storename: String
   missings: ItemUpdateManyInput
 }
 
 input StoreUpdateManyMutationInput {
   location: String
-  date: String
   coordinates: String
+  date: String
   storename: String
 }
 
@@ -380,20 +380,6 @@ input StoreWhereInput {
   location_not_starts_with: String
   location_ends_with: String
   location_not_ends_with: String
-  date: String
-  date_not: String
-  date_in: [String!]
-  date_not_in: [String!]
-  date_lt: String
-  date_lte: String
-  date_gt: String
-  date_gte: String
-  date_contains: String
-  date_not_contains: String
-  date_starts_with: String
-  date_not_starts_with: String
-  date_ends_with: String
-  date_not_ends_with: String
   coordinates: String
   coordinates_not: String
   coordinates_in: [String!]
@@ -408,6 +394,20 @@ input StoreWhereInput {
   coordinates_not_starts_with: String
   coordinates_ends_with: String
   coordinates_not_ends_with: String
+  date: String
+  date_not: String
+  date_in: [String!]
+  date_not_in: [String!]
+  date_lt: String
+  date_lte: String
+  date_gt: String
+  date_gte: String
+  date_contains: String
+  date_not_contains: String
+  date_starts_with: String
+  date_not_starts_with: String
+  date_ends_with: String
+  date_not_ends_with: String
   storename: String
   storename_not: String
   storename_in: [String!]
