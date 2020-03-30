@@ -6,7 +6,7 @@ require('dotenv/config');
 
 const typeDefs = importSchema('src/schemas/store.graphql');
 
-export const db = new Prisma({
+const db = new Prisma({
   endpoint: process.env.PRISMA_ENDPOINT || 'http://localhost:4488',
   secret: process.env.PRISMA_SECRET || '',
 });
