@@ -29,5 +29,5 @@ server.start(
       },
       port: process.env.PORT 
     }, () => {
-    console.log(`Server running on http://localhost:${process.env.PORT}`);
+    console.log(`Server is running on http://localhost:${process.env.PORT}`);
 });
