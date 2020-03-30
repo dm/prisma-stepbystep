@@ -1,10 +1,8 @@
-import { importSchema } from 'graphql-import';
-import { GraphQLServer } from 'graphql-yoga';
-
-import resolvers from './resolvers';
-import { Prisma } from '../prisma/generated/prisma';
-
-import 'dotenv/config';
+const { importSchema } = require('graphql-import');
+const { GraphQLServer } = require('graphql-yoga');
+const { resolvers } = require('resolvers');
+const { Prisma } = require('../prisma/generated/prisma');
+require('dotenv/config');
 
 const typeDefs = importSchema('src/schemas/store.graphql');
 
