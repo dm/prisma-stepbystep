@@ -1,6 +1,6 @@
 const { importSchema } = require('graphql-import');
 const { GraphQLServer } = require('graphql-yoga');
-const { resolvers } = require('resolvers');
+const resolvers  = require('./resolvers');
 const { Prisma } = require('../prisma/generated/prisma');
 require('dotenv/config');
 
