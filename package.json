@@ -10,7 +10,8 @@
     "nodemon": "^2.0.2"
   },
   "scripts": {
-    "dev": "nodemon --exec babel-node ./src/index.js"
+    "dev": "nodemon --exec babel-node ./src/index.js",
+    "start": "nodemon --exec babel-node ./src/index.js"
   },
   "dependencies": {
     "dotenv": "^8.2.0",
