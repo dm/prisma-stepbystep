@@ -30,7 +30,18 @@ app.get('/api/stores', (req, res) => {
             })
             break;
         case 'POST':
-            res.send(JSON.stringify({ Hello: 'POST'}));
+            const { body } = req;
+            const store =   prisma.store.create({ data: {
+                storename: body.storename,
+                location: body.location,
+                coordinates: body.coordinates,
+                date: new Date(),
+                Item: {
+                create: body.items,
+                },
+            }});
+
+            res.status(200).json(store);
             break;
         default:
         res.setHeader('Allow', ['GET', 'PUT'])
