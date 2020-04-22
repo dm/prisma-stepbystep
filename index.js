@@ -18,7 +18,16 @@ app.get('/api/stores', (req, res) => {
 
     switch (method) {
         case 'GET':
-            res.send(JSON.stringify({ Hello: 'GET'}));
+            prisma.store.findMany({ where: 
+                { 
+                    Item: {
+                        some: 
+                            {item: missing} 
+                    } 
+                }
+            }).then(results => {
+                res.status(200).json(results)
+            })
             break;
         case 'POST':
             res.send(JSON.stringify({ Hello: 'POST'}));
